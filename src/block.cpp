@@ -1,4 +1,4 @@
-#include "block.h"
+#include "../include/block.h"
 
 Block::Block(int h, int w, char s) {
   this->height = h;

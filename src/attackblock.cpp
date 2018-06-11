@@ -1,4 +1,4 @@
-#include "block.h"
+#include "../include/block.h"
 
 class AttackBlock : public Block {
   public:

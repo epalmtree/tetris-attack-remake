@@ -1,8 +1,7 @@
-#include <stdio.h>
-#include "board.h"
 #include <chrono>
+#include "../include/game.h"
 
-void run() {
+void Game::run() {
   double MS_PER_UPDATE = 1000./30.;
   auto previous = std::chrono::system_clock::now();
   double lag = 0.0;
@@ -21,13 +20,4 @@ void run() {
 
     // render(lag / MS_PER_UPDATE);
   // }
-}
-
-int main() {
-  try {
-    run();
-  } catch(...) {
-    return 1;
-  }
-  return 0;
 }
