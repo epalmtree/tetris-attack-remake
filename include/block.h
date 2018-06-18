@@ -1,16 +1,25 @@
 #ifndef BLOCK_H
 #define BLOCK_H
 
+typedef enum class BlockShape {TRIANGLE, SQUARE, CIRCLE, STAR} BlockShape;
+
 class Block {
   private:
-    bool processing = true;
-    int height;
-    int width;
-    char skin;
+    BlockShape shape;
+    bool attacking;
+    bool updating;
   
   public:
-    Block(int h, int w, char s);
+    Block(BlockShape shape, bool attacking, bool updating);
     ~Block();
+    BlockShape getShape();
+    bool isAttacking();
+    bool isUpdating();
+    void pacify();
+    void attack();
+    void finishUpdating();
+    void update();
+    char toString();
 };
 
 #endif
